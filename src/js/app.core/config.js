@@ -1,8 +1,8 @@
 function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
 
   BackAndProvider
-    .setSignUpToken('f7148142-9150-4fcd-91b3-eb8ac47ab0de')
-    .setAppName('amass')
+    .setSignUpToken('a89ec1fe-c50b-4869-852a-d7c0f294c23b')
+    .setAppName('amassapp')
   ;
 
   $urlRouterProvider.otherwise('/');

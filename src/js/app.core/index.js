@@ -6,10 +6,9 @@ import './backand/backand.min';
 
 import { config } from './config';
 
-import { RegisterController } from './app.user/controllers/register.controller'
+import './app.user/index';
 
 angular
-  .module('app.core', ['ui.router', 'ngCookies', 'backand'])
+  .module('app.core', ['ui.router', 'ngCookies', 'backand', 'app.user'])
   .config(config)
-  .controller('RegisterController', RegisterController)
 ;
