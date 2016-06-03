@@ -6,9 +6,9 @@ import './backand/backand.min';
 
 import { config } from './config';
 
-import './app.user/index';
+
 
 angular
-  .module('app.core', ['ui.router', 'ngCookies', 'backand', 'app.user'])
+  .module('app.core', ['ui.router', 'ngCookies', 'backand'])
   .config(config)
 ;
