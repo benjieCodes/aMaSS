@@ -10,7 +10,7 @@ function RegisterController (UserService, $cookies) {
     let user = {
       name: res.fullName,
       id: res.userId,
-      email: res.userName
+      email: res.username
     };
     $cookies.putObject('user', user);
     });
