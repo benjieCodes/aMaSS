@@ -5,11 +5,13 @@ import 'angular-cookies';
 import './backand/backand.min';
 
 import { config } from './config';
+import { run } from './run';
 
 import { NavController} from './controllers/nav.controller';
 
 angular
   .module('app.core', ['ui.router', 'ngCookies', 'backand'])
   .config(config)
+  .run(run)
   .controller('NavController', NavController)
 ;
