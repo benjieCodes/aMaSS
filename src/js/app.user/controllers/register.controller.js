@@ -5,8 +5,10 @@ function RegisterController (UserService) {
   vm.registerUser = registerUser;
 
   function registerUser (user) {
-    UserService.register(user)
-    console.log(user);
+    UserService.register(user).then((res) => {
+      console.log(res);
+    });
+
   }
 }
 RegisterController.$inject = ['UserService']
