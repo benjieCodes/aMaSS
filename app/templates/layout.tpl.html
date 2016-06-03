@@ -1,9 +1,15 @@
 <h2 class="title">Layout</h2>
-<nav>
+<nav class="nav-left">
   <a href="/#/">Home</a>
   <a href="/#/register">Register</a>
   <a href="/#/login">Login</a>
+  <span>|</span>
+  <a href="/#/" ng-click="vm.logoutUser()">Logout</a>
 </nav>
+
+
+
+
 <div class="container">
   <ui-view></ui-view>
 </div>

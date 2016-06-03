@@ -2,6 +2,7 @@ function UserService (Backand) {
 
   this.register = register;
   this.login = login;
+  this.logout = logout;
 
   function register (user) {
     return Backand.signup(
@@ -18,8 +19,13 @@ function UserService (Backand) {
       user.username,
       user.password
     );
-
   }
+
+  function logout (user) {
+    console.log('logged from Service');
+  }
+
+
 }
 
 UserService.$inject = ['Backand'];

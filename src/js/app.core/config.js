@@ -10,7 +10,8 @@ function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
   $stateProvider
     .state('root', {
       abstract: true,
-      templateUrl: 'templates/layout.tpl.html'
+      templateUrl: 'templates/layout.tpl.html',
+      controller: 'NavController as vm'
     })
     .state('root.home', {
       url: '/',
