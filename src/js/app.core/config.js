@@ -18,7 +18,8 @@ function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
     })
     .state('root.login', {
       url: '/login',
-      templateUrl: 'templates/login.tpl.html'
+      templateUrl: 'templates/login.tpl.html',
+      controller: 'LoginController as vm'
     })
     .state('root.register', {
       url: '/register',

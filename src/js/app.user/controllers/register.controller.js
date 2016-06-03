@@ -8,8 +8,8 @@ function RegisterController (UserService) {
     UserService.register(user).then((res) => {
       console.log(res);
     });
-
   }
+
 }
 RegisterController.$inject = ['UserService']
 
