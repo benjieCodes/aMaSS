@@ -1,4 +1,9 @@
-function config ($stateProvider, $urlRouterProvider) {
+function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
+
+  BackAndProvider
+    .setSignUpToken('f7148142-9150-4fcd-91b3-eb8ac47ab0de')
+    .setAppName('amass')
+  ;
 
   $urlRouterProvider.otherwise('/');
 
@@ -17,10 +22,11 @@ function config ($stateProvider, $urlRouterProvider) {
     })
     .state('root.register', {
       url: '/register',
-      templateUrl: 'templates/register.tpl.html'
+      templateUrl: 'templates/register.tpl.html',
+      controller: 'RegisterController as vm'
     })
   ;
 }
 
-config.$inject = ['$stateProvider', '$urlRouterProvider'];
+config.$inject = ['BackandProvider', '$urlRouterProvider', '$stateProvider' ];
 export { config };
