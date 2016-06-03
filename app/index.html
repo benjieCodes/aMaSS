@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+  <body ng-app="app">
     <div class="container">
-      <p>Welcome to your life.</p>
+      <ui-view>
+        {{5+5}}
+      </ui-view>
     </div>
     <script src="js/bundle.js"></script>
   </body>
