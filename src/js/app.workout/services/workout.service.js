@@ -1,8 +1,13 @@
 function WorkoutService ($state) {
 
-  this.gotoExercisePage = gotoExercisePage;
+  this.exercisePage = exercisePage;
+  this.add = add;
 
-  function gotoExercisePage () {
+  function add (workout) {
+
+  }
+
+  function exercisePage () {
     $state.go('root.exercise')
   }
 

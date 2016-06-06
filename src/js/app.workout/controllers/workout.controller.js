@@ -2,10 +2,15 @@ function WorkoutController (WorkoutService) {
 
   let vm = this;
 
-  vm.exercisePage = exercisePage;
+  vm.addWorkout = addWorkout;
+  vm.goToExercisePage = goToExercisePage;
 
-  function exercisePage () {
-    WorkoutService.gotoExercisePage();
+  function addWorkout (workout) {
+    WorkoutService.add(workout);
+  }
+
+  function goToExercisePage () {
+    WorkoutService.exercisePage();
   }
 
 }

@@ -36,7 +36,7 @@ function UserService (Backand , $cookies, $state) {
     } else if (currentState === 'root.login' || currentState === 'root.register') {
       console.log('register or login');
     } else {
-      $state.go('root.login')
+      $state.go('root.login');
     }
   }
 

@@ -14,4 +14,3 @@ angular
   .config(config)
   .run(run)
   .controller('NavController', NavController)
-;
