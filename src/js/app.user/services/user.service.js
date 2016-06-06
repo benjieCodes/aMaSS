@@ -30,7 +30,6 @@ function UserService (Backand , $cookies, $state) {
 
   function checkAuth (currentState) {
     let user = $cookies.getObject('user');
-    console.log(user);
     if (user) {
       console.log('successfully logged in!');
     } else if (currentState === 'root.login' || currentState === 'root.register') {

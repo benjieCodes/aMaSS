@@ -9,8 +9,12 @@ import { run } from './run';
 
 import { NavController} from './controllers/nav.controller';
 
+import { serverConstant } from './constants/server.constant';
+
 angular
   .module('app.core', ['ui.router', 'ngCookies', 'backand'])
   .config(config)
   .run(run)
   .controller('NavController', NavController)
+  .constant('serverConstant', serverConstant)
+;
