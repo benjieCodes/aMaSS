@@ -1,0 +1,19 @@
+<h2>Add Workout Here:</h2>
+<form ng-submit="vm.addWorkout(workout)">
+  <div class="form-group">
+    <label>Exercises</label>
+    <input type="text" class="form-control" placeholder="Exercises" ng-model="workout.exercises">
+  </div>
+  <div class="form-group">
+    <label>Intensity</label>
+    <input type="text" class="form-control" placeholder="Intensity Level" ng-model="workout.intensity">
+  </div>
+  <div class="form-group">
+    <label>Goals</label>
+    <input type="text" class="form-control" placeholder="Your Goals" ng-model="workout.goals">
+  </div>
+  <div class="form-group">
+    <label>Duration</label>
+    <input type="text" class="form-control" placeholder="Duration of Workout" ng-model="workout.duration">
+  </div>
+</form>
