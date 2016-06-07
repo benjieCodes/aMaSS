@@ -8,6 +8,7 @@ import { config } from './config';
 import { run } from './run';
 
 import { NavController} from './controllers/nav.controller';
+import { HomeController } from './controllers/home.controller';
 
 import { serverConstant } from './constants/server.constant';
 
@@ -16,5 +17,6 @@ angular
   .config(config)
   .run(run)
   .controller('NavController', NavController)
+  .controller('HomeController', HomeController)
   .constant('serverConstant', serverConstant)
 ;

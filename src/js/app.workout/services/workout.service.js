@@ -1,17 +1,23 @@
 function WorkoutService ($state, $http, serverConstant, $cookies) {
 
-  this.exercisePage = exercisePage;
   this.add = add;
+  this.exercisePage = exercisePage;
+  this.getWorkout = getWorkout;
 
   function add (workout) {
     let user = $cookies.getObject('user');
-    workout.id = user.id; // allows signed id to post added workout
-  
+    workout.id = user.id;
+
     $http.post(serverConstant.crudURL + '/workouts', workout)
   }
 
   function exercisePage () {
-    $state.go('root.exercise')
+    $state.go('root.exercise');
+  }
+
+  function getWorkout () {
+    let user = $cookies.getObject('user');
+    return $http.get(serverConstant.crudURL + '/users/' + user.id + '/workouts');
   }
 
 }
