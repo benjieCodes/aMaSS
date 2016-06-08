@@ -1,4 +1,4 @@
-function HomeController (WorkoutService) {
+function HomeController (WorkoutService, ExerciseService) {
 
   let vm = this;
 
@@ -7,10 +7,13 @@ function HomeController (WorkoutService) {
   function initialize() {
     WorkoutService.getWorkout().then( (res) => {
       vm.myWorkout = res.data.data;
-      console.log(res);
     });
+
+    ExerciseService.getExercise().then( (res) => {
+      console.log(res);
+    })
   }
 }
 
-HomeController.$inject = ['WorkoutService'];
+HomeController.$inject = ['WorkoutService', 'ExerciseService'];
 export { HomeController };
