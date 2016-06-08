@@ -1,4 +1,4 @@
-function WorkoutService ($http, serverConstant, $cookies) {
+function WorkoutService ($http, serverConstant, $cookies, $state) {
 
   this.add = add;
   this.getWorkout = getWorkout;
@@ -8,6 +8,7 @@ function WorkoutService ($http, serverConstant, $cookies) {
     workout.id = user.id;
 
     $http.post(serverConstant.crudURL + '/workouts', workout)
+    $state.go('root.home')
   }
 
   function getWorkout () {
@@ -17,5 +18,5 @@ function WorkoutService ($http, serverConstant, $cookies) {
 
 }
 
-WorkoutService.$inject = ['$http', 'serverConstant', '$cookies'];
+WorkoutService.$inject = ['$http', 'serverConstant', '$cookies', '$state'];
 export { WorkoutService };

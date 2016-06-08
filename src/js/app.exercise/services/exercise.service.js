@@ -1,16 +1,15 @@
-function ExerciseService () {
+function ExerciseService ($http, serverConstant, $cookies, $state) {
 
-  this.addExercisePage = addExercisePage;
   this.add = add;
 
-  function addExercisePage() {
-    $state.go('root.add-exercise')
-  }
+  function add(exercise) {
+    let user = $cookies.getObject('user');
+    exercise.id = user.id
 
-  function add() {
-    console.log('added');
+    $http.post(serverConstant.crudURL + '/exercises', exercise);
+    $state.go('root.home');
   }
 }
 
-ExerciseService.$inject = [];
+ExerciseService.$inject = ['$http', 'serverConstant', '$cookies', '$state'];
 export { ExerciseService };

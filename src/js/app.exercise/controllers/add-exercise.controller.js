@@ -4,7 +4,7 @@ function AddExerciseController (ExerciseService) {
   vm.addExercise = addExercise;
 
   function addExercise(exercise) {
-    ExerciseService.add();
+    ExerciseService.add(exercise);
   }
 }
 
