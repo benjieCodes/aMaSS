@@ -1,14 +1,14 @@
-function WorkoutController (WorkoutService) {
+function WorkoutController (WorkoutService, $state) {
 
   let vm = this;
 
   vm.goToAddWorkoutPage = goToAddWorkoutPage;
 
   function goToAddWorkoutPage () {
-    WorkoutService.addWorkoutPage();
+    $state.go('root.add-workout')
   }
 
 }
 
-WorkoutController.$inject = ['WorkoutService'];
+WorkoutController.$inject = ['WorkoutService' , '$state'];
 export { WorkoutController };

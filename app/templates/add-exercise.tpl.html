@@ -1,0 +1,41 @@
+<h2>Add Exercise</h2>
+<form ng-submit="vm.addExercise(exercise)">
+  <br><br>
+  <div class="form-group">
+    <label>Name of Exercise</label>
+    <input type="text" class="form-control" placeholder="Name" ng-model="exercise.name">
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" class="form-control" placeholder="How do you perform the exercise?" ng-model="exercise.description">
+  </div>
+  <div class="form-group">
+    <label>Body Part</label>
+    <input type="text" class="form-control" placeholder="What body part is the exercise using? (ex. legs, arms, abs)" ng-model="exercise.bodyPart">
+  </div>
+  <div class="form-group">
+    <label>Muscles</label>
+    <input type="text" class="form-control" placeholder="What muscle groups are contracted?" ng-model="exercise.muscles">
+  </div>
+  <div class="form-group">
+    <label>Component of Exercise</label>
+    <input type="text" class="form-control" placeholder="What main component is being trained?" ng-model="exercise.description">
+  </div>
+  <div class="form-group">
+    <label>Sets</label>
+    <input type="text" class="form-control" placeholder="If resistance is trained, how many sets are being trained?" ng-model="exercise.description">
+  </div>
+  <div class="form-group">
+    <label>Reps</label>
+    <input type="text" class="form-control" placeholder="How many reps are lifted per set?" ng-model="exercise.reps">
+  </div>
+  <div class="form-group">
+    <label>Rest Time</label>
+    <input type="text" class="form-control" placeholder="For each set, how long was your rest time?" ng-model="exercise.restTime">
+  </div>
+  <div class="form-group">
+    <label>Equipment</label>
+    <input type="text" class="form-control" placeholder="What equipment is being used for the exercise?" ng-model="exercise.equipment">
+  </div>
+  <button type="submit" class="btn btn-default">Submit New Exercise</button>
+</form>

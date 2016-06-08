@@ -1,12 +1,12 @@
-function ExerciseController (ExerciseService) {
+function ExerciseController (ExerciseService, $state) {
 
   let vm = this;
   vm.goToAddExercisePage = goToAddExercisePage;
 
   function goToAddExercisePage() {
-    ExerciseService.addExercisePage();
+    $state.go('root.add-exercise')
   }
 }
 
-ExerciseController.$inject = ['ExerciseService'];
+ExerciseController.$inject = ['ExerciseService', '$state'];
 export { ExerciseController };

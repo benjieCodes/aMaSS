@@ -1,8 +1,12 @@
-function AddExerciseController () {
+function AddExerciseController (ExerciseService) {
 
   let vm = this;
+  vm.addExercise = addExercise;
 
+  function addExercise(exercise) {
+    ExerciseService.add();
+  }
 }
 
-AddExerciseController.$inject = [];
+AddExerciseController.$inject = ['ExerciseService'];
 export { AddExerciseController };
