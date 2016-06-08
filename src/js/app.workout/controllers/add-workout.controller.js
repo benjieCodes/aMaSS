@@ -1,4 +1,4 @@
-function AddWorkoutController (WorkoutService) {
+function AddWorkoutController (WorkoutService, ExerciseService) {
 
   let vm = this;
 
@@ -8,7 +8,11 @@ function AddWorkoutController (WorkoutService) {
     WorkoutService.add(workout);
   }
 
+  ExerciseService.getAllExercises().then( (res) => {
+    console.log(res.data.data);
+  })
+
 }
 
-AddWorkoutController.$inject = ['WorkoutService'];
+AddWorkoutController.$inject = ['WorkoutService', 'ExerciseService'];
 export { AddWorkoutController };

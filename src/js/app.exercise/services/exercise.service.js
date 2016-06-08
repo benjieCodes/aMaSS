@@ -1,7 +1,7 @@
 function ExerciseService ($http, serverConstant, $cookies, $state) {
 
   this.add = add;
-  this.getExercise = getExercise;
+  this.getAllExercises = getAllExercises;
 
   function add(exercise) {
     let user = $cookies.getObject('user');
@@ -11,9 +11,8 @@ function ExerciseService ($http, serverConstant, $cookies, $state) {
     $state.go('root.home');
   }
 
-  function getExercise() {
-    let user = $cookies.getObject('user');
-    return $http.get(serverConstant.crudURL + '/users/' + user.id + '/exercises')
+  function getAllExercises() {
+    return $http.get(serverConstant.exerciseURL)
   }
 }
 

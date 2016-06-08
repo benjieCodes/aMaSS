@@ -6,6 +6,11 @@ function ExerciseController (ExerciseService, $state) {
   function goToAddExercisePage() {
     $state.go('root.add-exercise')
   }
+
+  ExerciseService.getAllExercises().then( (res) => {
+    console.log(res.data.data);
+  })
+
 }
 
 ExerciseController.$inject = ['ExerciseService', '$state'];

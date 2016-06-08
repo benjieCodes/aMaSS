@@ -1,8 +1,10 @@
+let base = 'https://api.backand.com/1';
+
 let serverConstant = {
-  mainURL: 'https://api.backand.com/1',
-  crudURL: 'https://api.backand.com/1/objects',
-  workoutURL: 'https://api.backand.com/1/workouts',
-  exerciseURL: 'https://api.backand.com/1/exercises'
+  mainURL: base,
+  crudURL: base + '/objects',
+  workoutURL: base + '/objects/workouts',
+  exerciseURL: base + '/objects/exercises'
 }
 
 export { serverConstant };

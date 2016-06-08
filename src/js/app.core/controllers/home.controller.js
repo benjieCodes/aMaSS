@@ -9,7 +9,7 @@ function HomeController (WorkoutService, ExerciseService) {
       vm.myWorkout = res.data.data;
     });
 
-    ExerciseService.getExercise().then( (res) => {
+    ExerciseService.getAllExercises().then( (res) => {
       console.log(res);
     })
   }
