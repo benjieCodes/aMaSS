@@ -1,7 +1,11 @@
-<h2>Add Workout Here:</h2>
+<h2>Add Workout</h2>
 <form ng-submit="vm.addWorkout(workout)">
   <div class="form-group">
     <br><br>
+    <label>Description</label>
+    <input type="text" class="form-control" placeholder="What are you focusing on today? (ex. push day ), or what body parts are you focusing on today? (ex. legs and shoulders )" ng-model="workout.description">
+  </div>
+  <div class="form-group">
     <label>Intensity</label>
     <input type="text" class="form-control" placeholder="On a scale of 1-10, how intense was this workout?" ng-model="workout.intensity">
   </div>

@@ -1,6 +1,12 @@
-function ExerciseService () {
+function ExerciseService ($state) {
+
+  this.addExercisePage = addExercisePage;
+
+  function addExercisePage() {
+    $state.go('root.add-exercise')
+  }
 
 }
 
-ExerciseService.$inject = [];
+ExerciseService.$inject = ['$state'];
 export { ExerciseService };

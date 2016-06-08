@@ -38,10 +38,15 @@ function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
       templateUrl: 'templates/add-workout.tpl.html',
       controller: 'AddWorkoutController as vm'
     })
-    .state('root.exercise', {
+    .state('root.exercises', {
+      url: '/exercises',
+      templateUrl: 'templates/exercise.tpl.html',
+      controller: 'ExerciseController as vm'
+    })
+    .state('root.add-exercise', {
       url: '/add-exercise',
       templateUrl: 'templates/add-exercise.tpl.html',
-      controller: 'ExerciseController as vm'
+      controller: 'AddExerciseController as vm'
     })
   ;
 }
