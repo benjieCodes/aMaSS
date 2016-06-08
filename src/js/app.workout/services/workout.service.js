@@ -1,7 +1,7 @@
 function WorkoutService ($state, $http, serverConstant, $cookies) {
 
   this.add = add;
-  this.exercisePage = exercisePage;
+  this.addWorkoutPage = addWorkoutPage;
   this.getWorkout = getWorkout;
 
   function add (workout) {
@@ -11,8 +11,8 @@ function WorkoutService ($state, $http, serverConstant, $cookies) {
     $http.post(serverConstant.crudURL + '/workouts', workout)
   }
 
-  function exercisePage () {
-    $state.go('root.exercise');
+  function addWorkoutPage () {
+    $state.go('root.add-workout');
   }
 
   function getWorkout () {

@@ -1,22 +1,2 @@
-<h2>Add Workout Here:</h2>
-<form ng-submit="vm.addWorkout(workout)">
-  <button type="button" class="btn btn-default btn-lg" ng-click="vm.goToExercisePage()">Add Exercises</button>
-  <div class="form-group">
-    <br><br>
-    <label>Intensity</label>
-    <input type="text" class="form-control" placeholder="On a scale of 1-10, how intense was this workout?" ng-model="workout.intensity">
-  </div>
-  <div class="form-group">
-    <label>Rating</label>
-    <input type="text" class="form-control" placeholder="On a scale of 1-10, how did you feel about this workout?" ng-model="workout.rating">
-  </div>
-  <div class="form-group">
-    <label>Duration of Workout</label>
-    <input type="text" class="form-control" placeholder="How long did it take you to finish this workout?" ng-model="workout.duration">
-  </div>
-  <div class="form-group">
-    <label>Date Completed</label>
-    <input type="text" class="form-control" placeholder="What day did you complete this workout?" ng-model="workout.dateCompleted">
-  </div>
-  <button type="submit" class="btn btn-default">Submit Workout</button>
-</form>
+<h2>Workouts</h2>
+  <button type="button" class="btn btn-default btn-lg" ng-click="vm.goToAddWorkoutPage()">Add Workout</button>
