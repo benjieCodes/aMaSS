@@ -4,13 +4,17 @@ function AddWorkoutController (WorkoutService, ExerciseService) {
 
   vm.addWorkout = addWorkout;
 
+  initialize()
+
   function addWorkout (workout) {
     WorkoutService.add(workout);
   }
 
-  ExerciseService.getAllExercises().then( (res) => {
-    console.log(res.data.data);
-  })
+  function initialize() {
+    ExerciseService.getAllExercises().then( (res) => {
+      vm.getExerciseLibrary = res.data.data;
+    });
+  }
 
 }
 

@@ -1,4 +1,10 @@
 <h2>Add Workout</h2>
+
+<h3>Exercises to add in workout:</h3>
+  <div ng-repeat="exercise in vm.getExerciseLibrary">
+    {{ exercise.name }}
+  </div>
+
 <form ng-submit="vm.addWorkout(workout)">
   <br><br>
   <div class="form-group">

@@ -1,2 +1,6 @@
-<h2>Exercises Library</h2>
+<h2>Exercise Library:</h2>
+<div class="exerciseLibrary" ng-repeat="exercise in vm.getExerciseLibrary">
+  <h4>Name: {{exercise.name}}</h4>
+</div>
+
 <button type="button" class="btn btn-default btn-lg" ng-click="vm.goToAddExercisePage()">Add New Exercise</button>

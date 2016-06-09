@@ -8,7 +8,6 @@ function HomeController (WorkoutService, ExerciseService) {
     WorkoutService.getWorkout().then( (res) => {
       vm.myWorkout = res.data.data;
     });
-
     ExerciseService.getAllExercises().then( (res) => {
       console.log(res);
     })
