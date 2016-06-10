@@ -1,7 +1,7 @@
 function WorkoutService ($http, serverConstant, $cookies, $state) {
 
   this.add = add;
-  this.getWorkout = getWorkout;
+  this.getUserWorkouts = getUserWorkouts;
 
   function add (workout) {
     let user = $cookies.getObject('user');
@@ -11,7 +11,7 @@ function WorkoutService ($http, serverConstant, $cookies, $state) {
     $state.go('root.home')
   }
 
-  function getWorkout () {
+  function getUserWorkouts() {
     let user = $cookies.getObject('user');
     return $http.get(serverConstant.crudURL + '/users/' + user.id + '/workouts');
   }

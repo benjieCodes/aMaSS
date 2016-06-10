@@ -5,7 +5,7 @@ function HomeController (WorkoutService, ExerciseService) {
   initialize()
 
   function initialize() {
-    WorkoutService.getWorkout().then( (res) => {
+    WorkoutService.getUserWorkouts().then( (res) => {
       vm.myWorkout = res.data.data;
     });
     ExerciseService.getAllExercises().then( (res) => {

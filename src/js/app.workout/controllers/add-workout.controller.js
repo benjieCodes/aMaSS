@@ -9,7 +9,7 @@ function AddWorkoutController (WorkoutService, ExerciseService) {
 
   function addWorkout (workout) {
     console.log(workout);
-    // WorkoutService.add(workout);
+    WorkoutService.add(workout);
   }
 
   function initialize() {
