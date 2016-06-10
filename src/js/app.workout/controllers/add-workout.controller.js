@@ -3,12 +3,10 @@ function AddWorkoutController (WorkoutService, ExerciseService) {
   let vm = this;
 
   vm.addWorkout = addWorkout;
-  vm.addExerciseToWorkout = addExerciseToWorkout;
 
   initialize()
 
   function addWorkout (workout) {
-    console.log(workout);
     WorkoutService.add(workout);
   }
 
@@ -16,10 +14,6 @@ function AddWorkoutController (WorkoutService, ExerciseService) {
     ExerciseService.getAllExercises().then( (res) => {
       vm.getExerciseLibrary = res.data.data;
     });
-  }
-
-  function addExerciseToWorkout(exercise) {
-    console.log(exercise);
   }
 }
 
