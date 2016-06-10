@@ -7,7 +7,13 @@ function AddWorkoutController (WorkoutService, ExerciseService) {
   initialize()
 
   function addWorkout (workout) {
-    WorkoutService.add(workout);
+    console.log(workout);
+    WorkoutService.add(workout).then( (res) => {
+      let workoutId = res.data.__metadata.id;
+      workout.exercises.forEach( (exerciseId) => {
+        WorkoutService.attachExercise(exerciseId, workoutId);
+      });
+    });
   }
 
   function initialize() {
