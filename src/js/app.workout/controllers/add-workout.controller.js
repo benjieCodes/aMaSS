@@ -3,11 +3,13 @@ function AddWorkoutController (WorkoutService, ExerciseService) {
   let vm = this;
 
   vm.addWorkout = addWorkout;
+  vm.addExerciseToWorkout = addExerciseToWorkout;
 
   initialize()
 
   function addWorkout (workout) {
-    WorkoutService.add(workout);
+    console.log(workout);
+    // WorkoutService.add(workout);
   }
 
   function initialize() {
@@ -16,6 +18,9 @@ function AddWorkoutController (WorkoutService, ExerciseService) {
     });
   }
 
+  function addExerciseToWorkout(exercise) {
+    console.log(exercise);
+  }
 }
 
 AddWorkoutController.$inject = ['WorkoutService', 'ExerciseService'];
