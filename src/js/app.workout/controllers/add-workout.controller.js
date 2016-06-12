@@ -1,4 +1,4 @@
-function AddWorkoutController (WorkoutService, ExerciseService) {
+function AddWorkoutController (WorkoutService, ExerciseService, $state) {
 
   let vm = this;
 
@@ -7,13 +7,14 @@ function AddWorkoutController (WorkoutService, ExerciseService) {
   initialize()
 
   function addWorkout (workout) {
-    console.log(workout);
     WorkoutService.add(workout).then( (res) => {
       let workoutId = res.data.__metadata.id;
       workout.exercises.forEach( (exerciseId) => {
         WorkoutService.attachExercise(exerciseId, workoutId);
       });
+    $state.go('root.home')
     });
+
   }
 
   function initialize() {
@@ -23,5 +24,5 @@ function AddWorkoutController (WorkoutService, ExerciseService) {
   }
 }
 
-AddWorkoutController.$inject = ['WorkoutService', 'ExerciseService'];
+AddWorkoutController.$inject = ['WorkoutService', 'ExerciseService', '$state'];
 export { AddWorkoutController };

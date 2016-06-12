@@ -19,5 +19,5 @@ function WorkoutController (WorkoutService, $state) {
 
 }
 
-WorkoutController.$inject = ['WorkoutService' , '$state'];
+WorkoutController.$inject = ['WorkoutService', '$state'];
 export { WorkoutController };

@@ -1,4 +1,4 @@
-function WorkoutService ($http, serverConstant, $cookies, $state) {
+function WorkoutService ($http, serverConstant, $cookies) {
 
   this.add = add;
   this.getUserWorkouts = getUserWorkouts;
@@ -7,7 +7,6 @@ function WorkoutService ($http, serverConstant, $cookies, $state) {
   function add (workout) {
     let user = $cookies.getObject('user');
     workout.id = user.id;
-
     return $http.post(serverConstant.crudURL + '/workouts', workout)
   }
 
@@ -18,10 +17,9 @@ function WorkoutService ($http, serverConstant, $cookies, $state) {
 
   function attachExercise(exerciseId, workoutId) {
     return $http.post(serverConstant.crudURL + '/workoutExercises', { exercise: exerciseId, workout: workoutId });
-
   }
 
 }
 
-WorkoutService.$inject = ['$http', 'serverConstant', '$cookies', '$state'];
+WorkoutService.$inject = ['$http', 'serverConstant', '$cookies'];
 export { WorkoutService };
