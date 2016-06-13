@@ -4,9 +4,7 @@
     <li>Duration: {{ workout.duration }}</li>
     <li>Rating (1-10): {{ workout.rating }}</li>
     <li>Intensity (1-10): {{ workout.intensity }}</li>
-    <li>Date Completed: {{ workout.dateCompleted}}</li>
-    <h4>Exercises in workout:</h4>
-    <li>{{ workout.workoutexercises }}</li>
+    <button type="button" class"btn btn-default" ng-click="vm.goToExercisePage()">Exercises on {{ workout.dateCompleted}} </button>
   </ul>
 
 </div>

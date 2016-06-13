@@ -39,7 +39,7 @@ function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
       controller: 'AddWorkoutController as vm'
     })
     .state('root.exercises', {
-      url: '/exercises',
+      url: '/exercises/userId',
       templateUrl: 'templates/exercise.tpl.html',
       controller: 'ExerciseController as vm'
     })

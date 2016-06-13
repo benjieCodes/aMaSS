@@ -4,8 +4,6 @@ function AddWorkoutController (WorkoutService, ExerciseService, $state) {
 
   vm.addWorkout = addWorkout;
 
-  initialize()
-
   function addWorkout (workout) {
     WorkoutService.add(workout).then( (res) => {
       let workoutId = res.data.__metadata.id;
@@ -15,12 +13,6 @@ function AddWorkoutController (WorkoutService, ExerciseService, $state) {
     $state.go('root.home')
     });
 
-  }
-
-  function initialize() {
-    ExerciseService.getAllExercises().then( (res) => {
-      vm.getExerciseLibrary = res.data.data;
-    });
   }
 }
 
