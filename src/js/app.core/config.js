@@ -13,11 +13,15 @@ function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
       templateUrl: 'templates/layout.tpl.html',
       controller: 'NavController as vm'
     })
+
+    // Home Page
     .state('root.home', {
       url: '/',
       templateUrl: 'templates/home.tpl.html',
       controller: 'HomeController as vm'
     })
+
+    // User Regisration & Login
     .state('root.login', {
       url: '/login',
       templateUrl: 'templates/login.tpl.html',
@@ -28,26 +32,41 @@ function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
       templateUrl: 'templates/register.tpl.html',
       controller: 'RegisterController as vm'
     })
+
+    // Workout States
     .state('root.workouts', {
       url: '/workouts',
       templateUrl: 'templates/workout.tpl.html',
       controller: 'WorkoutController as vm'
     })
     .state('root.add-workout', {
-      url: '/add-workout',
+      url: '/workouts/add',
       templateUrl: 'templates/add-workout.tpl.html',
       controller: 'AddWorkoutController as vm'
     })
+    .state('root.single-workout', {
+      url: 'workouts/:id',
+      templateUrl: 'templates/single-workout.tpl.html',
+      controller: 'SingleWorkoutController as vm'
+    })
+
+    // Exercise States
     .state('root.exercises', {
-      url: '/exercises/userId',
+      url: '/exercises/:id',
       templateUrl: 'templates/exercise.tpl.html',
       controller: 'ExerciseController as vm'
     })
     .state('root.add-exercise', {
-      url: '/add-exercise',
+      url: '/exercises/add',
       templateUrl: 'templates/add-exercise.tpl.html',
       controller: 'AddExerciseController as vm'
     })
+    .state('root.single-exercise', {
+      url: '/exercises/:id',
+      templateUrl: 'templates/single-exercise.tpl.html',
+      controller: 'SingleExerciseController as vm'
+    })
+
   ;
 }
 

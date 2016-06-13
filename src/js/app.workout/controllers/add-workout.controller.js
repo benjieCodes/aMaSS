@@ -10,7 +10,6 @@ function AddWorkoutController (WorkoutService, ExerciseService, $state) {
       workout.exercises.forEach( (exerciseId) => {
         WorkoutService.attachExercise(exerciseId, workoutId);
       });
-    $state.go('root.home')
     });
 
   }

@@ -6,7 +6,7 @@ function WorkoutService ($http, serverConstant, $cookies) {
 
   function add (workout) {
     let user = $cookies.getObject('user');
-    workout.id = user.id;
+    workout.user = user.id;
     return $http.post(serverConstant.crudURL + '/workouts', workout)
   }
 
