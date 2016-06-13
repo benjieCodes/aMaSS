@@ -4,10 +4,10 @@
     <li>Duration: {{ workout.duration }}</li>
     <li>Rating (1-10): {{ workout.rating }}</li>
     <li>Intensity (1-10): {{ workout.intensity }}</li>
-    <button type="button" class"btn btn-default" ng-click="vm.goToExercisePage()">Exercises on {{ workout.dateCompleted}} </button>
+    <button type="button" class"btn btn-default"> <a href="/#/exercises">Exercises on {{ workout.dateCompleted}}</a></button>
   </ul>
 
 </div>
 
 
-  <button type="button" class="btn btn-default btn-lg" ng-click="vm.goToAddWorkoutPage()">Add New Workout</button>
+  <button type="button" class="btn btn-default btn-lg"> <a href="/#/workouts/add">Add New Workout</a></button>

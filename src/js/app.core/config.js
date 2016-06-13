@@ -52,7 +52,7 @@ function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
 
     // Exercise States
     .state('root.exercises', {
-      url: '/exercises/:id',
+      url: '/exercises',
       templateUrl: 'templates/exercise.tpl.html',
       controller: 'ExerciseController as vm'
     })

@@ -2,18 +2,7 @@ function WorkoutController (WorkoutService, $state) {
 
   let vm = this;
 
-  vm.goToAddWorkoutPage = goToAddWorkoutPage;
-  vm.goToExercisePage = goToExercisePage;
-
   initialize()
-
-  function goToAddWorkoutPage () {
-    $state.go('root.add-workout');
-  }
-
-  function goToExercisePage() {
-    $state.go('root.exercises');
-  }
 
   function initialize() {
     WorkoutService.getUserWorkouts().then( (res) => {
