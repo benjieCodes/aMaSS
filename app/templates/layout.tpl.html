@@ -1,12 +1,18 @@
-<h2 class="title">aMaSS</h2>
-<nav class="nav-left">
-  <a class="homeNav" href="/#/">Welcome</a>
-  <a class="workoutNav" href="/#/workouts">Workouts</a>
-  <a class="registerNav" ng-show="vm.isLoggedOut" href="/#/register">Register</a>
-  <a class="loginNav" ng-show="vm.isLoggedOut" href="/#/login">Login</a>
-  <span>|</span>
-  <a class="logoutNav" href="/#/" ng-click="vm.logoutUser()">Logout</a>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/#/">aMaSS</a>
+    </div>
+    <ul class="nav navbar-nav nav-pills">
+      <li role="presentation"><a class="homeNav" href="/#/">Welcome</a></li>
+      <li role="presentation"><a class="workoutNav" href="/#/workouts">Workouts</a></li>
+      <li role="presentation"><a class="registerNav" ng-show="vm.isLoggedOut" href="/#/register">Register</a></li>
+      <li role="presentation"><a class="loginNav" ng-show="vm.isLoggedOut" href="/#/login">Login</a></li>
+      <li role="presentation"><a class="logoutNav" href="/#/" ng-click="vm.logoutUser()">Logout</a></li>
+    </ul>
+  </div>
 </nav>
-<div class="container">
+<div class="wrapper">
   <ui-view></ui-view>
 </div>

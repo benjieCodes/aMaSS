@@ -32,7 +32,7 @@ function UserService (Backand , $cookies, $state) {
     let user = $cookies.getObject('user');
     if (user) {
       console.log('successfully logged in!');
-    } else if (currentState === 'root.login' || currentState === 'root.register') {
+    } else if (currentState === 'root.login' || currentState === 'root.register' || currentState === 'root.home') {
       console.log('register or login');
     } else {
       $state.go('root.login');
