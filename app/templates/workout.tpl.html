@@ -1,12 +1,9 @@
 <h2>My Workouts:</h2>
-<div ng-repeat="workout in vm.myWorkouts">
-  <ul>
-    <li>Duration: {{ workout.duration }}</li>
-    <li>Rating (1-10): {{ workout.rating }}</li>
-    <li>Intensity (1-10): {{ workout.intensity }}</li>
-    <button type="button" class"btn btn-default"> <a href="/#/workouts/{{workout.id}}">Workout Details</a></button>
-  </ul>
 
+<div class="list-group">
+  <button type="button" class="list-group-item" ng-repeat="workout in vm.myWorkouts">
+    <a href="/#/workouts/{{workout.id}}"> {{workout.description}} - {{workout.dateCompleted}}</a>
+  </button>
 </div>
 
 
