@@ -2,11 +2,10 @@ function WorkoutController (WorkoutService, $state) {
 
   let vm = this;
 
-  initialize()
+  initialize();
 
   function initialize() {
     WorkoutService.getUserWorkouts().then( (res) => {
-      console.log(res);
       vm.myWorkouts = res.data.data;
     });
 
