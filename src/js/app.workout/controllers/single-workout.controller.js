@@ -1,6 +1,7 @@
-function SingleWorkoutController (WorkoutService, $http, $stateParams) {
+function SingleWorkoutController (WorkoutService, ExerciseService, $http, $stateParams) {
 
   let vm = this;
+  
 
   initialize();
 
@@ -9,8 +10,12 @@ function SingleWorkoutController (WorkoutService, $http, $stateParams) {
       console.log(res.data);
       vm.detailedWorkout = res.data;
     });
+
+    ExerciseService.getAllExercises().then( (res) => {
+      console.log(res);
+    });
   }
 
 }
-SingleWorkoutController.$inject = ['WorkoutService', '$http', '$stateParams'];
+SingleWorkoutController.$inject = ['WorkoutService', 'ExerciseService', '$http', '$stateParams'];
 export { SingleWorkoutController };
