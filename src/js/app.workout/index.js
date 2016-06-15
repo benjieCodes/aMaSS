@@ -6,6 +6,7 @@ import 'checklist-model';
 import { AddWorkoutController } from './controllers/add-workout.controller';
 import { WorkoutController } from './controllers/workout.controller';
 import { SingleWorkoutController } from './controllers/single-workout.controller';
+import { AddWorkoutExerciseController } from './controllers/add-workout-exercise.controller';
 
 // Service
 import { WorkoutService } from './services/workout.service';
@@ -15,6 +16,6 @@ angular
   .controller('AddWorkoutController', AddWorkoutController)
   .controller('WorkoutController', WorkoutController)
   .controller('SingleWorkoutController', SingleWorkoutController)
+  .controller('AddWorkoutExerciseController', AddWorkoutExerciseController)
   .service('WorkoutService', WorkoutService)
-
 ;

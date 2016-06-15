@@ -1,11 +1,11 @@
 <h2>Exercise Library:</h2>
   <div class="form-group exerciseLibrary" ng-repeat="exercise in vm.exerciseLibrary" ng-style="selectedExercise">
     <h4>{{ exercise.name }}</h4>
-    <ul>
-      <li>Body part used: {{ exercise.bodyPart }}</li>
-      <li>Component of exercise: {{ exercise.component }}</li>
-      <li>Equipment used: {{ exercise.equipment }}</li>
-    </ul>
+      <ul>
+        <li>Body part used: {{ exercise.bodyPart }}</li>
+        <li>Component of exercise: {{ exercise.component }}</li>
+        <li>Equipment used: {{ exercise.equipment }}</li>
+      </ul>
     <label class="checkbox-inline">Add to Workout List</label>
     <input type="checkbox" checklist-model="workout.exercises" checklist-value="exercise.id">
   </div>

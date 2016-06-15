@@ -67,8 +67,14 @@ function config (BackAndProvider, $urlRouterProvider, $stateProvider) {
       controller: 'SingleExerciseController as vm'
     })
 
+    // Workout-Exercise States
+    .state('root.add-workout-exercise', {
+      url: '/workouts/:workoutId/exercises/add',
+      templateUrl: 'templates/add-workout-exercise.tpl.html',
+      controller: 'AddWorkoutExerciseController as vm'
+    })
   ;
 }
 
-config.$inject = ['BackandProvider', '$urlRouterProvider', '$stateProvider' ];
+config.$inject = ['BackandProvider', '$urlRouterProvider', '$stateProvider'];
 export { config };
