@@ -1,9 +1,10 @@
-function UserService (Backand , $cookies, $state) {
+function UserService (Backand , $cookies, $state, $rootScope) {
 
   this.register = register;
   this.login = login;
   this.logout = logout;
   this.checkAuth = checkAuth;
+  this.logChanged = logChanged;
 
   function register (user) {
     return Backand.signup(
@@ -15,16 +16,22 @@ function UserService (Backand , $cookies, $state) {
     );
   }
 
+  function logChanged (status) {
+    $rootScope.$broadcast('logChanged', status);
+  }
+
   function login (user) {
     return Backand.signin(
       user.username,
       user.password
     );
+    this.logChanged('loggedIn');
   }
 
   function logout (user) {
     $cookies.remove('user');
     Backand.signout();
+    this.logChanged('loggedOut')
     $state.go('root.login');
   }
 
@@ -39,7 +46,8 @@ function UserService (Backand , $cookies, $state) {
     }
   }
 
+
 }
 
-UserService.$inject = ['Backand', '$cookies', '$state'];
+UserService.$inject = ['Backand', '$cookies', '$state', '$rootScope'];
 export { UserService };
