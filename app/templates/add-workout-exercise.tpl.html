@@ -1,5 +1,8 @@
-<h2>Exercise Library:</h2>
-  <form class="" action="index.html" method="post">
+<div>
+  <h2>Your workout: <small>{{vm.singleWorkout.dateCompleted}} - {{vm.singleWorkout.description}}</small></h2>
+</div>
+  <h5>Exercises to Add:</h5>
+  <form ng-submit="vm.addWorkoutExercise(exercises)" ng-init="exercises = []">
     <div class="form-group exerciseLibrary" ng-repeat="exercise in vm.exerciseLibrary" ng-style="selectedExercise">
       <h4>{{ exercise.name }}</h4>
         <ul>
@@ -8,7 +11,7 @@
           <li>Equipment used: {{ exercise.equipment }}</li>
         </ul>
       <label class="checkbox-inline">Add to Workout List</label>
-      <input type="checkbox" checklist-model="workout.exercises" checklist-value="exercise.id">
+      <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id">
     </div>
-    <button type="submit" class="btn btn-default">Add Exercises to Your Workout</button>
+    <button class="btn btn-default">Add Exercises to Your Workout</button>
   </form>
