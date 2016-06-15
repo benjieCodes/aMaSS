@@ -1,6 +1,7 @@
 import angular from 'angular';
 
 import 'checklist-model';
+import 'angular-filter';
 
 // Controllers
 import { AddWorkoutController } from './controllers/add-workout.controller';
@@ -12,7 +13,7 @@ import { AddWorkoutExerciseController } from './controllers/add-workout-exercise
 import { WorkoutService } from './services/workout.service';
 
 angular
-  .module('app.workout', ['checklist-model'])
+  .module('app.workout', ['checklist-model', 'angular.filter'])
   .controller('AddWorkoutController', AddWorkoutController)
   .controller('WorkoutController', WorkoutController)
   .controller('SingleWorkoutController', SingleWorkoutController)

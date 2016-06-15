@@ -1,4 +1,4 @@
-function AddWorkoutExerciseController (WorkoutService, ExerciseService, $stateParams) {
+function AddWorkoutExerciseController (WorkoutService, ExerciseService, $stateParams, $state) {
 
   let vm = this;
   vm.addWorkoutExercise = addWorkoutExercise;
@@ -17,10 +17,10 @@ function AddWorkoutExerciseController (WorkoutService, ExerciseService, $statePa
 
   function addWorkoutExercise (exercises) {
     WorkoutService.postWorkoutExercise(exercises, $stateParams.workoutId).then( (res) => {
-      // $state.go('root.')
     });
+    $state.go('root.workouts');
   }
 
 }
-AddWorkoutExerciseController.$inject = ['WorkoutService', 'ExerciseService', '$stateParams'];
+AddWorkoutExerciseController.$inject = ['WorkoutService', 'ExerciseService', '$stateParams', '$state'];
 export { AddWorkoutExerciseController };

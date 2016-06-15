@@ -7,8 +7,9 @@ function SingleWorkoutController (WorkoutService, ExerciseService, $http, $state
 
   function initialize() {
     WorkoutService.getSingleWorkout($stateParams.workoutId).then( (res) => {
-      console.log(res.data);
+      console.log(res.data.exercises);
       vm.detailedWorkout = res.data;
+      vm.workoutExercises = res.data.exercises;
     });
   }
 

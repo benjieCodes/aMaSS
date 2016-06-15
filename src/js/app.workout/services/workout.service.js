@@ -34,7 +34,6 @@ function WorkoutService ($http, serverConstant, $cookies) {
       let p = $http.post(serverConstant.crudURL + '/workoutExercises', { exercise: exerciseId, workout: workoutId });
       promises.push(p);
     });
-
     return Promise.all(promises);
 
   }
