@@ -6,6 +6,16 @@
   </ul>
 </div>
 
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.rating / 10 * 100 + '%'}}">
+  <span class"sr-only"> Rating </span>
+  </div>
+</div>
+<div class="progress">
+  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.intensity / 10 * 100 + '%'}}">
+  <span class"sr-only"> Intensity </span>
+  </div>
+</div>
 
   <h5>Exercises involved:</h5>
   <div class="myExercises" ng-repeat="exercise in vm.workoutExercises | unique: 'exercise.id'">
