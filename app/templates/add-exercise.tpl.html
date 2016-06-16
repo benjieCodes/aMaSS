@@ -1,4 +1,5 @@
 <h2>Add Exercise</h2>
+{{ exercise }}
 <form ng-submit="vm.addExercise(exercise)">
   <br><br>
   <div class="form-group">
@@ -7,11 +8,16 @@
   </div>
   <div class="form-group">
     <label>Description</label>
-    <input type="text" class="form-control" placeholder="How do you perform the exercise?" ng-model="exercise.description">
+    <textarea class="form-control" rows="3" placeholder="How do you perform the exercise?" ng-model="exercise.description"></textarea>
   </div>
   <div class="form-group">
     <label>Body Part</label>
-    <input type="text" class="form-control" placeholder="What body part is the exercise using? (ex. legs, arms, abs)" ng-model="exercise.bodyPart">
+    <!-- <input type="text" class="form-control" placeholder="What body part is the exercise using? (ex. legs, arms, abs)" ng-model="exercise.bodyPart"> -->
+    <label class="checkbox-inline"><input type="checkbox" value="23" ng-model="exercise.bodyPart">Arms</label>
+    <label class="checkbox-inline"><input type="checkbox" value="">Abdominals</label>
+    <label class="checkbox-inline"><input type="checkbox" value="">Chest</label>
+    <label class="checkbox-inline"><input type="checkbox" value="">Chest</label>
+
   </div>
   <div class="form-group">
     <label>Muscles</label>
