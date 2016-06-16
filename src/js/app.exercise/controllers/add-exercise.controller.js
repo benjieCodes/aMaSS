@@ -5,11 +5,33 @@ function AddExerciseController (ExerciseService, $state) {
   vm.bodyParts = [
     'Arms',
     'Shoulders',
+    'Upper Arms',
+    'Forearms',
     'Chest',
+    'Waist',
     'Back',
-    'Abdominals',
-    'Legs'
+    'Hips',
+    'Thighs',
+    'Calves'
   ];
+
+  vm.muscles = [
+    'Anterior deltoid',
+    'Biceps brachii',
+    'Biceps femoris',
+    'Brachialis',
+    'Gastrocnemius',
+    'Gluteus maximus',
+    'Latissimus dorsi',
+    'Obliquus externus abdominis',
+    'Pectoralis major',
+    'Quadriceps femoris',
+    'Rectus abdominis',
+    'Serratus anterior',
+    'Soleus',
+    'Trapezius',
+    'Triceps brachii'
+  ]
 
   function addExercise(exercise) {
     ExerciseService.add(exercise);

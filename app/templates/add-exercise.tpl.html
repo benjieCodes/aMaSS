@@ -1,4 +1,5 @@
 <h2>Add Exercise</h2>
+{{exercise}}
 <form ng-submit="vm.addExercise(exercise)" ng-init="exercise = {}">
   <!--  ng-init = starts up the exercise model as an empty object so that checklist-model works-->
   <br><br>
@@ -11,16 +12,22 @@
     <textarea class="form-control" rows="3" placeholder="How do you perform the exercise?" ng-model="exercise.description"></textarea>
   </div>
   <div class="form-group">
-    <label>General Body Parts Trained </label>
-    <div class="">
+    <label>General Body Part(s) Trained </label>
+    <div class="bodyParts">
       <label class="checkbox-inline" ng-repeat="bp in vm.bodyParts">
         <input type="checkbox" checklist-model="exercise.bodyPart" checklist-value="bp"> {{bp}}
       </label>
     </div>
   </div>
   <div class="form-group">
-    <label>Muscles</label>
-    <input type="text" class="form-control" placeholder="What muscle groups are contracted?" ng-model="exercise.muscles">
+    <label>Muscles Trained (optional)</label>
+    <div class="muscles">
+      <div ng-repeat="muscle in vm.muscles">
+        <input type="checkbox" checklist-model="exercise.muscles" checklist-value="muscle"> {{muscle}}
+      </div>
+    </div>
+    <small>If muscle is not on list</small>
+    <input type="text" placeholder="Add Muscle" ng-model="exercise.muscles">
   </div>
   <div class="form-group">
     <label>Component of Exercise</label>
