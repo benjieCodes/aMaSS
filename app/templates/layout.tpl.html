@@ -5,7 +5,20 @@
         <a class="navbar-brand" href="/#/"><img alt="Brand" src="../images/brand.png"></a>
       </div>
       <ul class="nav navbar-nav nav-pills presentationsNav">
-        <li role="presentation"><a class="navbar-text" href="/#/workouts">Workouts</a></li>
+        <li role="presentation" class="workout">
+          <a class="navbar-text">Workouts</a>
+          <ul class="subnav">
+            <li><a href="/#/workouts">My Workouts</a></li>
+            <li><a href="/#/workouts/add">Add Workout</a></li>
+          </ul>
+        </li>
+        <li role="presentation" class="exercise">
+          <a class="navbar-text">Exercises</a>
+          <ul class="subnav">
+            <li><a href="/#/exercises">Exercise Library</a></li>
+            <li><a href="/#/exercises/add">Add Exercise</a></li>
+          </ul>
+        </li>
         <li role="presentation"><a class="navbar-text" ng-show="vm.isLoggedOut" href="/#/register">Register</a></li>
         <li role="presentation"><a class="navbar-text" ng-show="vm.isLoggedOut" href="/#/login">Login</a></li>
         <li role="presentation"><a class="navbar-text navbar-right" href="/#/" ng-click="vm.logoutUser()">Logout</a></li>

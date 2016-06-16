@@ -7,3 +7,41 @@ body {
 .exerciseLibrary {
   float: left;
 }
+
+.workout {
+  position: relative;
+  &:hover {
+    ul.subnav { display: inline-block; }
+  }
+  ul.subnav {
+    display: none;
+    text-align: left;
+    list-style: none;
+    position: absolute;
+    left: 15px;
+    bottom: -10px;
+    width: 100px;
+    padding: 0;
+    border-radius: 5px;
+    background-color: RGBA(238, 238, 238, 1.00)
+  }
+}
+
+.exercise {
+  position: relative;
+  &:hover {
+    ul.subnav { display: inline-block; }
+  }
+  ul.subnav {
+    display: none;
+    text-align: left;
+    list-style: none;
+    position: absolute;
+    left: 15px;
+    bottom: -10px;
+    width: 100px;
+    padding: 0;
+    border-radius: 5px;
+    background-color: RGBA(238, 238, 238, 1.00)
+  }
+}
