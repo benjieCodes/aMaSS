@@ -2,22 +2,7 @@
 
 <h3>Exercises to add in workout:</h3>
 
-<form ng-submit="vm.addWorkout(workout)" ng-init="workout.exercises = []">
-  <div class="form-group exerciseForm" ng-repeat="exercise in vm.getExerciseLibrary" ng-style="selectedExercise">
-    <h4>{{ exercise.name }}</h4>
-    <ul>
-      <li>Body part used: {{ exercise.bodyPart }}</li>
-      <li>Component of exercise: {{ exercise.component }}</li>
-      <li>Number of sets: {{ exercise.sets }}</li>
-      <li>Number of reps: {{ exercise.reps }}</li>
-      <li>Rest time: {{ exercise.restTime }}</li>
-      <li>Equipment used: {{ exercise.equipment }}</li>
-    </ul>
-    <label class="checkbox-inline">Add to Workout List - {{ exercise.id }}</label>
-    <input type="checkbox" checklist-model="workout.exercises" checklist-value="exercise.id">
-  </div>
-
-  <br><br>
+<form ng-submit="vm.addWorkout(workout)">
   <div class="form-group">
     <label>Description</label>
     <input type="text" class="form-control" placeholder="What are you focusing on today? (ex. push day ), or what body parts are you focusing on today? (ex. legs and shoulders )" ng-model="workout.description">

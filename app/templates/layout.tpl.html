@@ -1,18 +1,18 @@
-
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/#/"><img alt="Brand" src="../images/brand.png"></a>
-
+<div class="navContainer">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/#/"><img alt="Brand" src="../images/brand.png"></a>
+      </div>
+      <ul class="nav navbar-nav nav-pills presentationsNav">
+        <li role="presentation"><a class="navbar-text" href="/#/workouts">Workouts</a></li>
+        <li role="presentation"><a class="navbar-text" ng-show="vm.isLoggedOut" href="/#/register">Register</a></li>
+        <li role="presentation"><a class="navbar-text" ng-show="vm.isLoggedOut" href="/#/login">Login</a></li>
+        <li role="presentation"><a class="navbar-text navbar-right" href="/#/" ng-click="vm.logoutUser()">Logout</a></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav nav-pills">
-      <li role="presentation"><a class="workoutNav" href="/#/workouts">Workouts</a></li>
-      <li role="presentation"><a class="registerNav" ng-show="vm.isLoggedOut" href="/#/register">Register</a></li>
-      <li role="presentation"><a class="loginNav" ng-show="vm.isLoggedOut" href="/#/login">Login</a></li>
-      <li role="presentation"><a class="logoutNav" href="/#/" ng-click="vm.logoutUser()">Logout</a></li>
-    </ul>
-  </div>
-</nav>
+  </nav>
+</div>
 <div class="wrapper">
   <ui-view></ui-view>
 </div>

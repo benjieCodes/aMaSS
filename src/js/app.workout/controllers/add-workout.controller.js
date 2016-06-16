@@ -6,12 +6,7 @@ function AddWorkoutController (WorkoutService, ExerciseService, $state) {
 
   function addWorkout (workout) {
     WorkoutService.add(workout).then( (res) => {
-      let workoutId = res.data.__metadata.id;
-      workout.exercises.forEach( (exerciseId) => {
-        WorkoutService.attachExercise(exerciseId, workoutId);
-      });
     });
-
   }
 }
 
