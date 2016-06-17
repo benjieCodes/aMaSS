@@ -19,6 +19,7 @@ function AddWorkoutExerciseController (WorkoutService, ExerciseService, $statePa
     WorkoutService.postWorkoutExercise(exercises, $stateParams.workoutId).then( (res) => {
     });
     $state.go('root.workouts');
+    alert('Workout has been Added!');
   }
 
 }
