@@ -1,6 +1,7 @@
 <div>
   <h2>Current Workout: <small>{{vm.singleWorkout.description}}</small></h2>
 </div>
+<div class="workoutExercise">
   <h5>Exercises to Add:</h5>
   <form ng-submit="vm.addWorkoutExercise(exercises)" ng-init="exercises = []">
     <div class="form-group exerciseLibrary" ng-repeat="exercise in vm.exerciseLibrary" ng-style="selectedExercise">
@@ -13,5 +14,7 @@
       <label class="checkbox-inline">Add to Workout List</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id">
     </div>
-    <button class="btn btn-default">Add Exercises to Your Workout</button>
+    <button class="btn btn-default btn-lg">Add Exercises to Your Workout</button>
   </form>
+
+</div>

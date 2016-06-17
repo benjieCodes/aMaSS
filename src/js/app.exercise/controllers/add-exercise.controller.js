@@ -30,11 +30,16 @@ function AddExerciseController (ExerciseService, $state) {
     'Soleus',
     'Trapezius',
     'Triceps brachii'
-  ]
+  ];
 
   function addExercise(exercise) {
-    ExerciseService.add(exercise);
-    $state.go('root.home')
+    console.log(exercise.bodyPart);
+    console.log(exercise.muscles);
+    exercise.bodyPart = exercise.bodyPart.toString();
+    exercise.muscles = exercise.muscles.toString();
+    ExerciseService.add(exercise).then( (res) => {
+      $state.go('root.workouts');
+    });
   }
 }
 

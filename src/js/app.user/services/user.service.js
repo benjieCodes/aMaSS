@@ -38,8 +38,7 @@ function UserService (Backand , $cookies, $state) {
       $state.go('root.login');
     }
   }
-
+  
 }
-
 UserService.$inject = ['Backand', '$cookies', '$state'];
 export { UserService };

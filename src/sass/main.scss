@@ -2,6 +2,11 @@
 
 body {
   background-size: cover;
+  background: url('../../images/background.jpg');
+}
+
+.navContainer {
+  padding-bottom: 50px;
 }
 
 .exerciseLibrary {
@@ -23,7 +28,7 @@ body {
     width: 100px;
     padding: 0;
     border-radius: 5px;
-    background-color: RGBA(238, 238, 238, 1.00)
+    background-color: RGBA(248, 248, 248, 1.00);
   }
 }
 
@@ -42,6 +47,28 @@ body {
     width: 100px;
     padding: 0;
     border-radius: 5px;
-    background-color: RGBA(238, 238, 238, 1.00)
+    background-color: RGBA(248, 248, 248, 1.00);
   }
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: RGBA(248, 248, 248, 1.00);
+  p {
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+
+h2 {
+  padding: 5px;
+  border-width: 20px;
+  display: inline-block;
+  background: white;
+}
+
+ui-view {
+  color: RGBA(2, 2, 43, 1.00);
 }

@@ -5,7 +5,12 @@ function ExerciseService ($http, serverConstant, $cookies) {
 
   function add(exercise) {
     let user = $cookies.getObject('user');
-    $http.post(serverConstant.crudURL + '/exercises', exercise);
+    if (exercise === '') {
+      exercise === 'Undefined'
+    } else {
+      exercise === exercise;
+    }
+    return $http.post(serverConstant.crudURL + '/exercises', exercise);
   }
 
   function getAllExercises() {
