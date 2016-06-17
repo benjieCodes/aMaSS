@@ -3,7 +3,6 @@ function AddExerciseController (ExerciseService, $state) {
   let vm = this;
   vm.addExercise = addExercise;
   vm.bodyParts = [
-    'Arms',
     'Shoulders',
     'Upper Arms',
     'Forearms',

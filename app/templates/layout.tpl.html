@@ -19,9 +19,11 @@
             <li><a href="/#/exercises/add">Add Exercise</a></li>
           </ul>
         </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
         <li role="presentation"><a class="navbar-text" ng-show="vm.isLoggedOut" href="/#/register">Register</a></li>
         <li role="presentation"><a class="navbar-text" ng-show="vm.isLoggedOut" href="/#/login">Login</a></li>
-        <li role="presentation"><a class="navbar-text navbar-right" href="/#/" ng-click="vm.logoutUser()">Logout</a></li>
+        <li role="presentation"><a class="navbar-text" href="/#/" ng-click="vm.logoutUser()">Logout</a></li>
       </ul>
     </div>
   </nav>

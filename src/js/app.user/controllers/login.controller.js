@@ -14,7 +14,7 @@ function LoginController (UserService, $cookies, $state) {
     };
 
       $cookies.putObject('user', user);
-      $state.go('root.home')
+      $state.go('root.workouts')
     });
   }
 

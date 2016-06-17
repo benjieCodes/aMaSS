@@ -1,11 +1,4 @@
 <h4>Workout Details of {{vm.detailedWorkout.description}}</h4>
-<div class="detailedworkout">
-  <ul>
-    <li>Intensity: {{vm.detailedWorkout.intensity}}</li>
-    <li>Rating: {{vm.detailedWorkout.rating}}</li>
-  </ul>
-</div>
-
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.rating / 10 * 100 + '%'}}">
   <span class"sr-only"> Rating </span>

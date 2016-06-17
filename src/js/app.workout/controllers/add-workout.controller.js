@@ -6,6 +6,7 @@ function AddWorkoutController (WorkoutService, ExerciseService, $state) {
 
   function addWorkout (workout) {
     WorkoutService.add(workout).then( (res) => {
+      $state.go('root.workouts')
     });
   }
 }
