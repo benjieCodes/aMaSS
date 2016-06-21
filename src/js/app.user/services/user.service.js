@@ -26,6 +26,7 @@ function UserService (Backand , $cookies, $state) {
     $cookies.remove('user');
     Backand.signout();
     $state.go('root.login');
+    alert('You have been logged out.');
   }
 
   function checkAuth (currentState) {
@@ -38,7 +39,7 @@ function UserService (Backand , $cookies, $state) {
       $state.go('root.login');
     }
   }
-  
+
 }
 UserService.$inject = ['Backand', '$cookies', '$state'];
 export { UserService };

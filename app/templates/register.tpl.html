@@ -1,24 +1,26 @@
-<h2>Register</h2>
-<form ng-submit="vm.registerUser(user)">
-  <div class="form-group">
-    <label>First Name</label>
-    <input type="text" class="form-control" placeholder="First Name" ng-model="user.firstName">
-  </div>
-  <div class="form-group">
-    <label>Last Name</label>
-    <input type="text" class="form-control" placeholder="Last Name" ng-model="user.lastName">
-  </div>
-  <div class="form-group">
-    <label>Email address/Username</label>
-    <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
-  </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
-  </div>
-  <div class="form-group">
-    <label>Confirm Password</label>
-    <input type="password" class="form-control" placeholder="Confirm Password" ng-model="user.confirmPassword">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<div class="registerContainer">
+  <h2>Register New User</h2>
+  <form ng-submit="vm.registerUser(user)">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control input-sm" placeholder="First Name" ng-model="user.firstName">
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control input-sm" placeholder="Last Name" ng-model="user.lastName">
+    </div>
+    <div class="form-group">
+      <label>Email address/Username</label>
+      <input type="email" class="form-control input-sm" placeholder="Email" ng-model="user.email">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control input-sm" placeholder="Password" ng-model="user.password">
+    </div>
+    <div class="form-group">
+      <label>Confirm Password</label>
+      <input type="password" class="form-control input-sm" placeholder="Confirm Password" ng-model="user.confirmPassword">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg active">Registered!</button>
+  </form>
+</div>
