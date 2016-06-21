@@ -1,15 +1,15 @@
-<h2>My Workouts:</h2>
+<div class="myWorkoutContainer">
+  <h2>Hello {{ vm.name }}!</h2>
+  <h3>Here are your Workouts: </h3>
 
-<div class="list-group">
-  <button type="button" class="list-group-item" ng-repeat="workout in vm.myWorkouts">
-    <a href="/#/workouts/{{workout.id}}">
-      <strong>Day: </strong>{{workout.dateCompleted | date:'MM-dd-yyyy'}}
-      <strong>Description: </strong>{{workout.description}}
-    </a>
-  </button>
+  <div class="list-group">
+    <button type="button" class="list-group-item" ng-repeat="workout in vm.myWorkouts">
+      <a href="/#/workouts/{{workout.id}}">
+        <strong>Day: </strong>{{workout.dateCompleted | date:'MM-dd-yyyy'}}
+        <strong>Description: </strong>{{workout.description}}
+      </a>
+    </button>
+  </div>
 
-  <button ng-click"vm.editWorkout()">Edit Workout</button>
+  <a class="btn btn-primary btn-lg" href="/#/workouts/add" role="button">Add New Workout</a>
 </div>
-
-
-  <button type="button" class="btn btn-default btn-lg"> <a href="/#/workouts/add">Add New Workout</a></button>

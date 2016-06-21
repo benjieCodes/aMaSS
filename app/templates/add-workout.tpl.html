@@ -1,48 +1,50 @@
-<h2>Add Workout</h2>
-<form ng-submit="vm.addWorkout(workout)">
-  <div class="form-group">
-    <label>Description</label>
-    <input type="text" class="form-control" placeholder="What are you focusing on today? (ex. push day ), or what body parts are you focusing on today? (ex. legs and shoulders )" ng-model="workout.description">
-  </div>
-  <div class="form-group">
-    <label> Intensity </label>
-    <select class="dropdown" ng-model="workout.intensity">
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label> Rating </label>
-    <select class="dropdown" ng-model="workout.rating">
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label>Duration of Workout</label>
-    <input type="text" class="form-control" placeholder="Approximately how long did it take you to finish this workout?" ng-model="workout.duration">
-  </div>
-  <div class="form-group">
-    <label>Date and Time Started</label>
-    <input type="datetime-local" class="form-control" placeholder="What day did you complete this workout?" ng-model="workout.dateCompleted">
-  </div>
-  <button class="btn btn-default btn-lg">Submit New Workout</button>
-</form>
+<div class="addWorkoutContainer">
+  <h2>Add Workout</h2>
+  <form ng-submit="vm.addWorkout(workout)">
+    <div class="form-group">
+      <label>Goal Description</label>
+      <input type="text" class="form-control" placeholder="What are you focusing on today? (ex. push day, leg day, cardio, .etc )" ng-model="workout.description">
+    </div>
+    <div class="form-group">
+      <label>How do you feel about this workout?</label><br>
+      <small>Intensity</small>
+      <select class="dropdown" ng-model="workout.intensity">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <small>Rating</small>
+      <select class="dropdown" ng-model="workout.rating">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Duration of Workout</label>
+      <input type="text" class="form-control" placeholder="Approximately how long will it take you to finish this workout?" ng-model="workout.duration">
+    </div>
+    <div class="form-group">
+      <label>Date and Time Started</label>
+      <input type="datetime-local" class="form-control" placeholder="What day and time did you start this workout?" ng-model="workout.dateCompleted">
+    </div>
+    <button class="btn btn-primary btn-lg">Submit New Workout</button>
+  </form>
+
+</div>
