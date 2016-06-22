@@ -1,21 +1,22 @@
 <div class="singleWorkoutContainer">
   <h1><strong>{{vm.detailedWorkout.description}}</strong></h1>
+
   <label>Rating Scale: </label>
   <div class="progress">
-    <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.rating / 10 * 100 + '%'}}">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.rating / 10 * 100 + '%'}}">
       <span class"sr-only"> {{vm.detailedWorkout.rating + '/10'}} </span>
     </div>
   </div>
   <label>Intensity Scale: </label>
   <div class="progress">
-    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.intensity / 10 * 100 + '%'}}">
+    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{vm.detailedWorkout.intensity}}" style="width: {{vm.detailedWorkout.intensity / 10 * 100 + '%'}}">
       <span class"sr-only"> {{vm.detailedWorkout.intensity + '/10'}} </span>
     </div>
   </div>
 
   <h2>Exercises involved:</h2>
   <div class="myExercises" ng-repeat="exercise in vm.workoutExercises">
-    <h5>Name of Exercise: {{exercise.exercise.name}}</h5>
+    <h4>Name of Exercise: {{exercise.exercise.name}}</h4>
     <ul>
       <li>Description: {{exercise.exercise.description}}</li>
       <li>Exercise Component: {{exercise.exercise.component}}</li>
@@ -24,6 +25,5 @@
       <li>Equipment: {{exercise.exercise.equipment}}</li>
     </ul>
   </div>
-  <button type="button" class="btn btn-default"> <a href="/#/workouts/{{vm.detailedWorkout.id}}/exercises/add">Add Exercise To My Workout</a></button>
-  <button type="button" class="btn btn-default btn-lg"> <a href="/#/exercises/add">Add Exercise To Library</a></button>
+    <a class="btn btn-primary btn-lg" href="/#/workouts/{{vm.detailedWorkout.id}}/exercises/add">Add Exercises To "{{vm.detailedWorkout.description}}"</a>
 </div>

@@ -1,6 +1,6 @@
 <div class="exercisesContainer">
   <h1>Exercise Library:</h1>
-  <div class="exerciseLibrary list-group" ng-repeat="exercise in vm.exerciseLibrary">
+  <div class="exerciseLibrary list-group" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name'">
     <a class="list btn btn-primary" href="/#/exercises/{{exercise.id}}">{{exercise.name}}</a>
   </div>
   <a class="list btn btn-primary btn-lg" href="/#/workouts">Go To My Workouts</a>

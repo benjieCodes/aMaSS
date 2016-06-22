@@ -215,3 +215,23 @@ footer {
     margin-bottom: 30px;
   }
 }
+
+.workoutExerciseContainer {
+  overflow: hidden;
+  background: RGBA(248, 248, 248, 1.00);
+  padding: 50px;
+  color: RGBA(2, 2, 43, 1.00);
+  border-radius: 20px;
+  margin-bottom: 100px;
+  .exerciseLibrary {
+    width: 200px;
+    margin: 20px;
+  }
+  label {
+    display: inline-block;
+  }
+  h1 {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}

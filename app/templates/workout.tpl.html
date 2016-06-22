@@ -1,7 +1,7 @@
 <div class="myWorkoutContainer">
   <h1>Hey {{ vm.name }}!</h1><i> Haven't worked out yet?</i> <a class="btn btn-primary btn-lg" href="/#/workouts/add" role="button">Add New Workout</a>
   <h2>Here are your Workouts: </h2>
-  <div class="list-group" ng-repeat="workout in vm.myWorkouts">
+  <div class="list-group" ng-repeat="workout in vm.myWorkouts | orderBy: 'dateCompleted'">
     <h3><strong>Goal Description: </strong><a href="/#/workouts/{{workout.id}}">{{workout.description}}</a><br></h3>
     <strong>Date Started: {{workout.dateCompleted | date:'MMMM dd, yyyy'}}</strong><br>
     <strong>Time Started: {{workout.dateCompleted | date:'hh:mm a'}}</strong><br>

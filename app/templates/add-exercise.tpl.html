@@ -20,14 +20,6 @@
       <br>
     </div>
     <div class="form-group">
-      <label>Muscles Trained (optional)</label>
-      <div class="muscles">
-        <div ng-repeat="muscle in vm.muscles">
-          <input type="checkbox" checklist-model="exercise.muscles" checklist-value="muscle"> {{muscle}}
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
       <label>Component of Exercise</label>
       <select class="dropdown" ng-model="exercise.component">
         <option value="Cardio">Warm-Up</option>
@@ -35,6 +27,7 @@
         <option value="Strength">Strength</option>
         <option value="Endurance">Endurance</option>
         <option value="Flexibility">Flexibility</option>
+        <option value="Flexibility">Other</option>
       </select>
     </div>
     <div class="form-group">
