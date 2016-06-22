@@ -8,6 +8,14 @@ body {
 .navContainer {
   margin-bottom: 50px;
   padding-bottom: 50px;
+  .navbar-brand {
+    overflow: visible;
+    img {
+      width: 45px;
+      height: 45px;
+      font-color: RGBA(38, 28, 65, 1.00);
+    }
+  }
 }
 
 .exerciseLibrary {
@@ -82,6 +90,13 @@ footer {
 }
 .homeContainer {
   opacity: .7;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50px;
+    right: 75px;
+    width: 300px;
+  }
 }
 .loginContainer {
   background: RGBA(248, 248, 248, 1.00);

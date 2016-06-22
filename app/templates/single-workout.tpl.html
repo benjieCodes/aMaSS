@@ -1,4 +1,4 @@
-<div class="singleWorkoutContainer">
+ <div class="singleWorkoutContainer">
   <h1><strong>{{vm.detailedWorkout.description}}</strong></h1>
 
   <label>Rating Scale: </label>
@@ -13,13 +13,12 @@
       <span class"sr-only"> {{vm.detailedWorkout.intensity + '/10'}} </span>
     </div>
   </div>
-
   <h2>Exercises involved:</h2>
-  <div class="myExercises" ng-repeat="exercise in vm.workoutExercises">
+  <div class="myExercises" ng-repeat="exercise in vm.workoutExercises | unique: 'exercise.id'">
     <a href="/#/exercises/{{exercise.exercise.id}}"><h4>{{exercise.exercise.name}}</h4></a>
     <p>Body Part(s) Trained: <strong>{{exercise.exercise.bodyPart}}</strong></p>
     <p>Component of Exercise: <strong>{{exercise.exercise.component}}</strong></p>
     <hr>
   </div><br><br>
-    <a class="btn btn-primary btn-lg" href="/#/workouts/{{vm.detailedWorkout.id}}/exercises/add">Add Exercises To "{{vm.detailedWorkout.description}}"</a>
+    <a class="btn btn-primary btn-lg" href="/#/workouts/{{vm.detailedWorkout.id}}/exercises/add">Add Exercises To {{vm.detailedWorkout.description}}</a>
 </div>

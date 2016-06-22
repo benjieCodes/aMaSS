@@ -17,9 +17,13 @@ function AddWorkoutExerciseController (WorkoutService, ExerciseService, $statePa
 
   function addWorkoutExercise (exercises) {
     WorkoutService.postWorkoutExercise(exercises, $stateParams.workoutId).then( (res) => {
+      if (res === '') {
+      alert('No exercise(s) added');
+      } else {
+      alert('Your exercise(s) have been added!');
+      }
+      $state.go('root.workouts');
     });
-    $state.go('root.workouts');
-    alert('Workout has been Added!');
   }
 
 }
