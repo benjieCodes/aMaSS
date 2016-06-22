@@ -8,7 +8,12 @@ function SingleExerciseController ($stateParams, ExerciseService) {
     ExerciseService.getSingleExercise($stateParams.id).then( (res) => {
       console.log(res);
       vm.singleExercise = res.data;
-    })
+      if (vm.singleExercise.image.substring(0,4) === 'http' || vm.singleExercise.image.substring(-4) === 'jpeg' || vm.singleExercise.image.substring(-3) === 'png') {
+        vm.singleExercise.image = vm.singleExercise.image
+      } else {
+      vm.singleExercise.image = 'http://placehold.it/300x300';
+      }
+    });
   }
 
 }
