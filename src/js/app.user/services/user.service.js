@@ -23,19 +23,24 @@ function UserService (Backand , $cookies, $state) {
   }
 
   function logout (user) {
-    $cookies.remove('user');
-    Backand.signout();
-    $state.go('root.login');
-    alert('You have been logged out.');
+    let loggedIn = $cookies.getObject('user');
+    if (loggedIn) {
+      $cookies.remove('user');
+      Backand.signout();
+      $state.go('root.login');
+      alert('You have been logged out');
+    }
+    else {
+
+    }
   }
 
   function checkAuth (currentState) {
     let user = $cookies.getObject('user');
     if (user) {
-      console.log('successfully logged in!');
     } else if (currentState === 'root.login' || currentState === 'root.register' || currentState === 'root.home') {
-      console.log('register or login');
     } else {
+      alert('Please login or register to access your workouts');
       $state.go('root.login');
     }
   }

@@ -10,7 +10,8 @@ function LoginController (UserService, $cookies, $state) {
     let user = {
       name: res.fullName,
       id: res.userId,
-      email: res.username
+      email: res.username,
+      token: res.access_token,
     };
       $cookies.putObject('user', user);
       alert('Enjoy your workout!')
