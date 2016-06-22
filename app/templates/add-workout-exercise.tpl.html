@@ -2,17 +2,13 @@
   <h1>Add exercises to - <strong>{{vm.singleWorkout.description}}</strong></h1>
   <h2>Exercises to Add:</h2>
   <form ng-submit="vm.addWorkoutExercise(exercises)" ng-init="exercises = []">
-    <div class="form-group exerciseLibrary" ng-repeat="exercise in vm.exerciseLibrary" ng-style="selectedExercise">
-      <h4>{{ exercise.name }}</h4>
-        <ul>
-          <li>Body part used: {{ exercise.bodyPart }}</li>
-          <li>Component of exercise: {{ exercise.component }}</li>
-          <li>Equipment used: {{ exercise.equipment }}</li>
-        </ul>
-      <label class="checkbox-inline">Add to Workout</label>
-      <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id">
+    <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name'" ng-style="selectedExercise">
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a><label class="checkbox-inline">Add to {{vm.singleWorkout.description}}</label>
+      <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
+        Body Part(s) Trained:   <strong>{{ exercise.bodyPart }} </strong>
+        <hr>
     </div>
-    <button class="btn btn-default btn-lg">Add Exercises to Your Workout</button>
+    <button class="btn btn-primary btn-lg">Add Exercises to {{vm.singleWorkout.description}}</button>
   </form>
 
 </div>

@@ -203,6 +203,33 @@ footer {
   color: RGBA(2, 2, 43, 1.00);
   border-radius: 20px;
   margin-bottom: 100px;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  li {
+    font-size: 20px;
+    padding: 5px;
+    float: left;
+    display: block;
+    clear: both;
+    overflow: auto;
+  }
+  .comment {
+    padding-top: 30px;
+    float: left;
+    clear: both;
+  }
+}
+
+.workoutExerciseContainer {
+  overflow: hidden;
+  background: RGBA(248, 248, 248, 1.00);
+  padding: 50px;
+  color: RGBA(2, 2, 43, 1.00);
+  border-radius: 20px;
+  margin-bottom: 100px;
   .exerciseLibrary {
     width: 200px;
     margin: 20px;
@@ -214,9 +241,21 @@ footer {
     margin: 0;
     margin-bottom: 30px;
   }
+  h4 {
+    display: inline-block;
+  }
+  .workoutExercises {
+    display:inline-block;
+    float: left;
+    clear: both;
+  }
+  .btn-lg {
+    float: left;
+    clear: both;
+  }
 }
 
-.workoutExerciseContainer {
+.singleExerciseContainer {
   overflow: hidden;
   background: RGBA(248, 248, 248, 1.00);
   padding: 50px;
