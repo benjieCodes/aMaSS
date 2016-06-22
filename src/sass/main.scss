@@ -80,17 +80,9 @@ ui-view {
 footer {
   margin-top: 50px;
 }
-
 .homeContainer {
-  h4 {
-    background: RGBA(248, 248, 248, 1.00);
-    display: inline-block;
-    padding: 10px;
-    border-radius: 100px;
-    margin-bottom: 20px;
-  }
+  opacity: .7;
 }
-
 .loginContainer {
   background: RGBA(248, 248, 248, 1.00);
   padding: 50px;
@@ -120,9 +112,15 @@ footer {
   color: RGBA(2, 2, 43, 1.00);
   border-radius: 20px;
   margin-bottom: 100px;
-  h2 {
+  h1 {
     margin: 0;
     margin-bottom: 30px;
+  }
+  input {
+    width: 500px;
+  }
+  input.time {
+    width: 225px;
   }
 }
 
@@ -132,8 +130,47 @@ footer {
   color: RGBA(2, 2, 43, 1.00);
   border-radius: 20px;
   margin-bottom: 100px;
+  overflow: hidden;
+  i {
+    margin-left: 30px;
+  }
+  h1 {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .list-group {
+    float: left;
+    clear: both;
+  }
+  .list-group-item {
+    display: inline-block;
+    color: RGBA(84, 55, 83, 1.00);
+  }
+  .list.btn-primary {
+    color: #fff;
+    background-color: RGBA(104, 71, 98, 1.00);
+    &:hover {
+      background: RGBA(137, 103, 120, 1.00);
+    }
+  }
+}
+
+.singleWorkoutContainer {
+  background: RGBA(248, 248, 248, 1.00);
+  padding: 50px;
+  color: RGBA(2, 2, 43, 1.00);
+  border-radius: 20px;
+  margin-bottom: 100px;
+  label {
+    display: inline-block;
+  }
   h2 {
     margin: 0;
     margin-bottom: 30px;
   }
+  .progress {
+    width: 300px;
+  }
+
 }

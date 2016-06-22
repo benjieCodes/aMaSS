@@ -12,8 +12,8 @@ function LoginController (UserService, $cookies, $state) {
       id: res.userId,
       email: res.username
     };
-
       $cookies.putObject('user', user);
+      alert('Enjoy your workout!')
       $state.go('root.workouts')
     });
   }

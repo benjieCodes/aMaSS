@@ -1,4 +1,4 @@
-function RegisterController (UserService, $cookies) {
+function RegisterController (UserService, $cookies, $state) {
 
   let vm = this;
 
@@ -14,9 +14,11 @@ function RegisterController (UserService, $cookies) {
     };
     $cookies.putObject('user', user);
     });
+    alert('You have successfully registered! Now log in to your account!')
+    $state.go('root.login')
   }
 
 }
-RegisterController.$inject = ['UserService', '$cookies']
+RegisterController.$inject = ['UserService', '$cookies', '$state']
 
 export { RegisterController }

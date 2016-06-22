@@ -1,25 +1,29 @@
-<h4>Workout Details of {{vm.detailedWorkout.description}}</h4>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.rating / 10 * 100 + '%'}}">
-  <span class"sr-only"> Rating </span>
+<div class="singleWorkoutContainer">
+  <h1><strong>{{vm.detailedWorkout.description}}</strong></h1>
+  <label>Rating Scale: </label>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.rating / 10 * 100 + '%'}}">
+      <span class"sr-only"> {{vm.detailedWorkout.rating + '/10'}} </span>
+    </div>
   </div>
-</div>
-<div class="progress">
-  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.intensity / 10 * 100 + '%'}}">
-  <span class"sr-only"> Intensity </span>
+  <label>Intensity Scale: </label>
+  <div class="progress">
+    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{vm.detailedWorkout.rating}}" style="width: {{vm.detailedWorkout.intensity / 10 * 100 + '%'}}">
+      <span class"sr-only"> {{vm.detailedWorkout.intensity + '/10'}} </span>
+    </div>
   </div>
-</div>
 
-  <h4>Exercises involved:</h4>
+  <h2>Exercises involved:</h2>
   <div class="myExercises" ng-repeat="exercise in vm.workoutExercises">
     <h5>Name of Exercise: {{exercise.exercise.name}}</h5>
-      <ul>
-        <li>Description: {{exercise.exercise.description}}</li>
-        <li>Exercise Component {{exercise.exercise.component}}</li>
-        <li>Body Parts Trained: {{exercise.exercise.bodyPart}}</li>
-        <li>Muscles Trained: {{exercise.exercise.muscles}}</li>
-        <li>Equipment: {{exercise.exercise.equipment}}</li>
-      </ul>
+    <ul>
+      <li>Description: {{exercise.exercise.description}}</li>
+      <li>Exercise Component: {{exercise.exercise.component}}</li>
+      <li>Body Parts Trained: {{exercise.exercise.bodyPart}}</li>
+      <li>Muscles Trained: {{exercise.exercise.muscles}}</li>
+      <li>Equipment: {{exercise.exercise.equipment}}</li>
+    </ul>
   </div>
-<button type="button" class="btn btn-default"> <a href="/#/workouts/{{vm.detailedWorkout.id}}/exercises/add">Add Exercise To My Workout</a></button>
-<button type="button" class="btn btn-default btn-lg"> <a href="/#/exercises/add">Add Exercise To Library</a></button>
+  <button type="button" class="btn btn-default"> <a href="/#/workouts/{{vm.detailedWorkout.id}}/exercises/add">Add Exercise To My Workout</a></button>
+  <button type="button" class="btn btn-default btn-lg"> <a href="/#/exercises/add">Add Exercise To Library</a></button>
+</div>
