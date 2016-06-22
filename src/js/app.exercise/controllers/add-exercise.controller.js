@@ -33,12 +33,11 @@ function AddExerciseController (ExerciseService, $state) {
   ];
 
   function addExercise(exercise) {
-    console.log(exercise.bodyPart);
-    console.log(exercise.muscles);
     exercise.bodyPart = exercise.bodyPart.toString();
     exercise.muscles = exercise.muscles.toString();
     ExerciseService.add(exercise).then( (res) => {
-      $state.go('root.workouts');
+      alert('Exercise Added!');
+      $state.go('root.exercises');
     });
   }
 }

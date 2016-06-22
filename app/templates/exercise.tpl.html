@@ -1,11 +1,7 @@
-<h2>Exercise Library:</h2>
-  <div class="exerciseLibrary" ng-repeat="exercise in vm.exerciseLibrary" ng-style="selectedExercise">
-    <h4>{{ exercise.name }}</h4>
-      <ul>
-        <li>Body part used: {{ exercise.bodyPart }}</li>
-        <li>Component of exercise: {{ exercise.component }}</li>
-        <li>Equipment used: {{ exercise.equipment }}</li>
-      </ul>
-    <label class="checkbox-inline">Add to Workout List</label>
-    <input type="checkbox" checklist-model="workout.exercises" checklist-value="exercise.id">
+<div class="exercisesContainer">
+  <a class="list btn btn-primary" href="/#/workouts">Go To My Workouts</a>
+  <h1>Exercise Library:</h1>
+  <div class="exerciseLibrary list-group" ng-repeat="exercise in vm.exerciseLibrary">
+    <a class="list btn btn-primary" href="/#/exercises/{{exercise.id}}">{{exercise.name}}</a>
   </div>
+</div>
