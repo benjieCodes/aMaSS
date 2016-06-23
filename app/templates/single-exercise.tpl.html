@@ -1,10 +1,12 @@
 <div class="singleExerciseContainer">
   <h1>{{vm.singleExercise.name}}</h1>
-  <h3>Details: </h3>
-  <ul>
-    <li>Photo: <img src="{{vm.singleExercise.image}}" alt="photo of exercise"/></li>
-    <li>Description: {{vm.singleExercise.description}}</li>
-    <li>Component of Exercise: {{ vm.singleExercise.component}}</li>
-    <li>Equipment Used: {{vm.singleExercise.equipment}}</li>
+    <img src="{{vm.singleExercise.image}}" alt="photo of exercise"/><br><br>
+    <h2>Workout Component: <strong>{{( vm.singleExercise.component )}} </strong></h2>
+    <h4>Description:</h4>
+      <p>{{vm.singleExercise.description}}</p><br>
+    <h4>Body Part(s) Used:</h4>
+      <p>{{vm.singleExercise.bodyPart}}</p><br>
+    <h4>Equipment Used:</h4>
+      <p>{{vm.singleExercise.equipment}}</p>
   </ul>
 </div>

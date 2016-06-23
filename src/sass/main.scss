@@ -223,6 +223,9 @@ footer {
     margin: 0;
     margin-bottom: 30px;
   }
+  h3 {
+    display: inline-block;
+  }
   li {
     font-size: 20px;
     padding: 5px;
@@ -231,10 +234,47 @@ footer {
     clear: both;
     overflow: auto;
   }
+  strong {
+    margin-left: 40px;
+  }
   .comment {
     padding-top: 30px;
     float: left;
     clear: both;
+  }
+  .exerciseComponents {
+    float: left;
+    padding-left: 10px;
+    li {
+      font-size: 17px;
+      width: 300px;
+    }
+
+  }
+  .warmUp {
+    float: left;
+    margin: 0px;
+    width: 150px;
+  }
+  .cardio {
+    float: left;
+    width: 150px;
+  }
+  .strength {
+    float: left;
+    width: 150px;
+  }
+  .endurance {
+    float: left;
+    width: 150px;
+  }
+  .flexibility {
+    float: left;
+    width: 150px;
+  }
+  .other {
+    float: left;
+    width: 150px;
   }
 }
 
@@ -287,5 +327,11 @@ footer {
   h1 {
     margin: 0;
     margin-bottom: 30px;
+  }
+  h2 {
+    display: inline-block;
+  }
+  img {
+    width: 50%;
   }
 }

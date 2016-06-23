@@ -1,10 +1,47 @@
 <div class="exercisesContainer">
-  <h1>Exercise Library:</h1>
-  <ul>
-   <li class="exerciseLibrary" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name'"><a href="/#/exercises/{{exercise.id}}">{{exercise.name}}</a></li>
-  </ul>
+  <div class="exerciseLibrary">
+    <h1>Exercise Library:</h1>
+      <div class="exerciseComponents">
+        <div class="warmUp">
+          <h3><strong>Warm-Up</strong></h3>
+            <ul>
+             <li ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {component: 'Warm-Up'}"><a href="/#/exercises/{{exercise.id}}">{{exercise.name}}</a></li>
+            </ul>
+        </div>
+        <div class="cardio">
+          <h3><strong>Cardio</strong></h3>
+            <ul>
+             <li ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {component: 'Cardio'}"><a href="/#/exercises/{{exercise.id}}">{{exercise.name}}</a></li>
+            </ul>
+        </div>
+        <div class="strength">
+          <h3><strong>Strength</strong></h3>
+          <ul>
+            <li ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {component: 'Strength'}"><a href="/#/exercises/{{exercise.id}}">{{exercise.name}}</a></li>
+          </ul>
+        </div>
+        <div class="endurance">
+          <h3><strong>Endurance</strong></h3>
+          <ul>
+            <li ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {component: 'Endurance'}"><a href="/#/exercises/{{exercise.id}}">{{exercise.name}}</a></li>
+          </ul>
+        </div>
+        <div class="flexibility">
+          <h3><strong>Flexibility</strong></h3>
+          <ul>
+            <li ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {component: 'Flexibility'}"><a href="/#/exercises/{{exercise.id}}">{{exercise.name}}</a></li>
+          </ul>
+        </div>
+        <div class="other">
+          <h3><strong>Other</strong></h3>
+          <ul>
+            <li ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {component: 'Other'}"><a href="/#/exercises/{{exercise.id}}">{{exercise.name}}</a></li>
+          </ul>
+        </div>
+      </div>
+  </div>
   <div class="comment">
     <i>Didn't find what you're looking for?</i><br>
-    <a class="btn btn-primary btn-lg" href="/#/workouts/exercises/add">Add A New Exercise!</a>
+    <a class="btn btn-primary btn-lg" href="/#/exercises/add">Add A New Exercise!</a>
   </div>
 </div>

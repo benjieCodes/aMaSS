@@ -6,7 +6,7 @@
       <input type="text" class="form-control" placeholder="What are you focusing on today? (ex. push day, leg day, cardio, .etc )" ng-model="workout.description">
     </div>
     <div class="form-group">
-      <label>How do you feel about this workout?</label><br>
+      <label>How intense do you want the workout to be?</label><br>
       <small>Intensity</small>
       <select class="dropdown" ng-model="workout.intensity">
         <option value="0">0</option>
@@ -20,7 +20,8 @@
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
-      </select>
+      </select><br><br>
+      <label>How well do you enjoy this workout?</label><br>
       <small>Rating</small>
       <select class="dropdown" ng-model="workout.rating">
         <option value="0">0</option>
