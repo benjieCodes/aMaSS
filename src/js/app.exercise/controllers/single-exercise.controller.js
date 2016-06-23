@@ -11,7 +11,7 @@ function SingleExerciseController ($stateParams, ExerciseService) {
       if (vm.singleExercise.image.substring(0,4) === 'http' || vm.singleExercise.image.substring(-4) === 'jpeg' || vm.singleExercise.image.substring(-3) === 'png') {
         vm.singleExercise.image = vm.singleExercise.image
       } else {
-      vm.singleExercise.image = 'http://placehold.it/300x300';
+      vm.singleExercise.image = 'http://placehold.it/500x500';
       }
     });
   }

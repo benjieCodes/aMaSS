@@ -154,6 +154,10 @@ footer {
     margin: 0;
     margin-bottom: 30px;
   }
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
   .btn-lg {
     margin-left: 30px;
   }
@@ -262,21 +266,21 @@ footer {
     float: left;
     width: 150px;
   }
-  .strength {
-    float: left;
-    width: 150px;
-  }
-  .endurance {
+  .resistance {
     float: left;
     width: 150px;
   }
   .flexibility {
     float: left;
     width: 150px;
+    margin-left: 30px;
   }
   .other {
     float: left;
     width: 150px;
+  }
+  .comment {
+    float: left;
   }
 }
 
