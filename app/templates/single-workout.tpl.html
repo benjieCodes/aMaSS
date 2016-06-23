@@ -16,8 +16,6 @@
   <h2>Exercises involved:</h2>
   <div class="myExercises" ng-repeat="exercise in vm.workoutExercises | unique: 'exercise.id'">
     <a href="/#/exercises/{{exercise.exercise.id}}"><h4>{{exercise.exercise.name}}</h4></a>
-    <p>Body Part(s) Trained: <strong>{{exercise.exercise.bodyPart}}</strong></p>
-    <hr>
   </div><br><br>
     <a class="btn btn-primary btn-lg" href="/#/workouts/{{vm.detailedWorkout.id}}/exercises/add">Add Exercises To {{vm.detailedWorkout.description}}</a>
 </div>

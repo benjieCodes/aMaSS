@@ -8,7 +8,7 @@ function AddExerciseController (ExerciseService, $state) {
     'Upper Arms',
     'Forearms',
     'Chest',
-    'Waist',
+    'Abdominals',
     'Back',
     'Hips',
     'Glutes',

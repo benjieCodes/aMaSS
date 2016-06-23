@@ -185,7 +185,9 @@ footer {
   }
   h2 {
     margin: 0;
-    margin-bottom: 30px;
+  }
+  h4 {
+    display: inline-block;
   }
   .progress {
     width: 300px;
@@ -299,11 +301,7 @@ footer {
   h4 {
     display: inline-block;
   }
-  .workoutExercises {
-    display:inline-block;
-    float: left;
-    clear: both;
-  }
+
   .btn-lg {
     float: left;
     clear: both;
