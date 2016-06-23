@@ -67,6 +67,18 @@
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
+    <h3>Cardio</h3>
+    <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Cardio'}" ng-style="selectedExercise">
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
+      <label class="checkbox-inline">Add to Workout</label>
+      <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
+    </div>
+    <h3>Other</h3>
+    <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Other'}" ng-style="selectedExercise">
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
+      <label class="checkbox-inline">Add to Workout</label>
+      <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
+    </div>
     <button class="btn btn-primary btn-lg">Add Exercises to {{vm.singleWorkout.description}}</button>
   </form>
 

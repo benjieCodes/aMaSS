@@ -13,7 +13,9 @@ function AddExerciseController (ExerciseService, $state) {
     'Hips',
     'Glutes',
     'Thighs',
-    'Calves'
+    'Calves',
+    'Cardio',
+    'Other'
   ];
 
   function addExercise(exercise) {
