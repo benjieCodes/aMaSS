@@ -3,68 +3,67 @@
   <form ng-submit="vm.addWorkoutExercise(exercises)" ng-init="exercises = []">
     <h3>Neck</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Neck'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Shoulders</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Shoulders'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
-    
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Upper Arms</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Upper Arms'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- - Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Forearms</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Forearms'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Chest</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Chest'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Abdominals</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Abdominals'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Back</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Back'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Hips</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Hips'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Glutes</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Glutes'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Thighs</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Thighs'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
     <h3>Calves</h3>
     <div class="form-group workoutExercises" ng-repeat="exercise in vm.exerciseLibrary | orderBy: 'name' | filter: {bodyPart: 'Calves'}" ng-style="selectedExercise">
-      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a>
+      <a href="/#/exercises/{{exercise.id}}"><h4>{{ exercise.name }}</h4></a> <span>- Goal: {{exercise.component}}</span>
       <label class="checkbox-inline">Add to Workout</label>
       <input type="checkbox" checklist-model="exercises" checklist-value="exercise.id"><br>
     </div>
