@@ -13,10 +13,10 @@ function RegisterController (UserService, $cookies, $state) {
       email: res.username,
       token: res.access_token
     };
-    $cookies.putObject('user', user);
+      $cookies.putObject('user', user);
+      alert('You have successfully registered! Now log in to your account!')
+      $state.go('root.login')
     });
-    alert('You have successfully registered! Now log in to your account!')
-    $state.go('root.login')
   }
 
 }

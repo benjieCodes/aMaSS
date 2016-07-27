@@ -38,7 +38,7 @@ function UserService (Backand , $cookies, $state) {
   function checkAuth (currentState) {
     let user = $cookies.getObject('user');
     if (user) {
-    } else if (currentState === 'root.login' || currentState === 'root.register' || currentState === 'root.home') {
+    } else if (currentState === 'root.login' || currentState === 'root.register' || currentState === 'root.home' || currentState === 'root.exercises') {
     } else {
       alert('Please login or register to access your workouts');
       $state.go('root.login');
