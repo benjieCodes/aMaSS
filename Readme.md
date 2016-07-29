@@ -11,4 +11,5 @@ A Community Fitness App to Track your daily workouts!
 * Google Maps API to choose where to exercise
 * responsive design
 
+### Deployment
 Domain link: (http://amass.surge.sh)
